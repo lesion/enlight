@@ -52,7 +52,7 @@ void loop()
     // has to be > of 150% from the previous value
     if(capacitance*100/lastCapacitance>150)
     {
-      // check enought time is passed since last switch
+      // check if enough time is passed since last switch
       if(!touching && millis()-lastMillis>MIN_SWITCH_DELAY_MS)
       {
         lastMillis=millis();
