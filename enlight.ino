@@ -42,7 +42,7 @@ long lastMillis = millis();
 
 void loop()
 {
-    long capacitance =  sensor.capacitiveSensorRaw(10);
+    long capacitance =  touch.capacitiveSensorRaw(10);
 
     Serial.print(capacitance*100/lastCapacitance);
     Serial.print("\t");
