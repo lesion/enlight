@@ -44,8 +44,7 @@ void loop()
 {
     long capacitance =  touch.capacitiveSensorRaw(10);
 
-    Serial.print(capacitance*100/lastCapacitance);
-    Serial.print("\t");
+    Serial.println(capacitance*100/lastCapacitance);
 
     // to toggle the status of relay
     // the difference in capacitance
@@ -58,8 +57,6 @@ void loop()
         lastMillis=millis();
         touching=true;
         state = !state;
-        Serial.print("Changing state:");
-        Serial.println(state);
         digitalWrite(RELAY,state);
       }
     }
@@ -67,12 +64,6 @@ void loop()
     {
       touching=false;
     }
-
-   Serial.print(lastCapacitance);
-   Serial.print("\t");
-   Serial.print(capacitance);
-   Serial.print("\t");
-   Serial.println(state);
 
    lastCapacitance=capacitance;
    delay(50);
