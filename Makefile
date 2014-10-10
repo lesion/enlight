@@ -1,5 +1,5 @@
 ## INSTALL arduino-mk to use this makefile
-ARDUINO_LIBS=CapacitiveSensor
+F_CPU=8000000L
 AVRDUDE_ARD_PROGRAMMER=usbasp
-AVRDUDE_ARD_OPTS=-q -q -Pusb
+AVRDUDE_OPTS=-q
 include /usr/share/arduino/Arduino.mk
